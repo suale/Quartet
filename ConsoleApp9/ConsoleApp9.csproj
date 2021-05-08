@@ -46,6 +46,7 @@
     <Compile Include="Concatenate.cs" />
     <Compile Include="Divide.cs" />
     <Compile Include="LambdaFunction.cs" />
+    <Compile Include="OneIniRound.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadText.cs" />

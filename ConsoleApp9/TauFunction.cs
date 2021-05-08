@@ -11,47 +11,82 @@ namespace ConsoleApp9
     {
 
 
-        public List<BitArray> TauFuncImplement(List<BitArray> gelen64BitArrayler)
+        public BitArray TauFuncImplement(BitArray gelen64BitArray)
         {
             //x3 lane gelecek(tek 64 bit ona göre yazıyorsun)
-            List<BitArray> giden64BitArrayler = new List<BitArray>();
+            BitArray giden64BitArray = new BitArray(64,true);
 
-            foreach (var item in gelen64BitArrayler)
+            for (int i = 0; i < gelen64BitArray.Length; i++)
             {
-                giden64BitArrayler.Add(item);
+                giden64BitArray[i] = gelen64BitArray[i];
             }
+
+
 
             BitArray gecici = new BitArray(8, true);
-            BitArray gidenGecici = new BitArray(8, true);
-
-            for (int i = 0; i < gelen64BitArrayler.Count; i++)
+            BitArray gidenGecici;
+            for (int j = 0; j < gecici.Count; j++)
             {
-
-                for (int j = 0; j < gecici.Count; j++)
-                {
-                    gecici[j] = gelen64BitArrayler[i][gelen64BitArrayler[i].Count - (gecici.Count - j)];
-
-                }
-                BitArray gelenConstant = new BitArray(8, true);
-                gelenConstant = RoundTauConsts.AddConstant();
-
-
-                gidenGecici = gecici.Xor(gelenConstant);
-
-                
-
-                for(int t = 0; t < gelen64BitArrayler[i].Count; t++)
-                {
-                    if (t >= gelen64BitArrayler[i].Count - gidenGecici.Count)
-                        giden64BitArrayler[i][t] = gidenGecici[gecici.Count - (gelen64BitArrayler[i].Count - t)];
-                   
-                }
+                gecici[j] = gelen64BitArray[gelen64BitArray.Count - (gecici.Count - j)];
 
             }
 
-            return giden64BitArrayler;
+
+
+            BitArray gelenConstant;
+            gelenConstant = RoundTauConsts.AddConstant();
+
+            gidenGecici = gecici.Xor(gelenConstant);
+
+
+
+            for (int t = 0; t < gelen64BitArray.Count; t++)
+            {
+                if (t >= gelen64BitArray.Count - gidenGecici.Count)
+                    giden64BitArray[t] = gidenGecici[gecici.Count - (gelen64BitArray.Count - t)];
+
+            }
+
+
+            return giden64BitArray;
 
 
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+//for (int i = 0; i < gelen64BitArray.Count; i++)
+//{
+
+//    for (int j = 0; j < gecici.Count; j++)
+//    {
+//        gecici[j] = gelen64BitArray[gelen64BitArray.Count - (gecici.Count - j)];
+
+//    }
+//    BitArray gelenConstant = new BitArray(8, true);
+//    gelenConstant = RoundTauConsts.AddConstant();
+
+
+//    gidenGecici = gecici.Xor(gelenConstant);
+
+
+
+//    for(int t = 0; t < gelen64BitArray.Count; t++)
+//    {
+//        if (t >= gelen64BitArray.Count - gidenGecici.Count)
+//            giden64BitArray[t] = gidenGecici[gecici.Count - (gelen64BitArray.Count - t)];
+
+//    }
+
+//}
