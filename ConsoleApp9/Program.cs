@@ -13,36 +13,36 @@ namespace ConsoleApp9
         {
 
          
-            ReadText textOku = new ReadText();
+           // ReadText textOku = new ReadText();
 
-            //textOku.divideLanes("aksdhjkasjkdlasffafadasdasdsadfafhylk");
+           // //textOku.divideLanes("aksdhjkasjkdlasffafadasdasdsadfafhylk");
 
-            List<BitArray> deneme = new List<BitArray>();
+           // List<BitArray> deneme = new List<BitArray>();
 
-            XFunction xFunction = new XFunction();
-            deneme= xFunction.XfunctionImplement(textOku.DivideLanes("aksdhjkasjkdlasffafadasdasdsadfafhylk"));
+           // XFunction xFunction = new XFunction();
+           // deneme= xFunction.XfunctionImplement(textOku.DivideLanes("aksdhjkasjkdlasffafadasdasdsadfafhylk"));
 
            
 
-            BitArray dene = new BitArray(64, true);
-            dene[1] = false;
-            dene[7] = false;
-            dene[3] = false;
+           // BitArray dene = new BitArray(64, true);
+           // dene[1] = false;
+           // dene[7] = false;
+           // dene[3] = false;
 
-            StringToHex stringToHex = new StringToHex();
-            BitArray asd = new BitArray(8,true);
+           // StringToHex stringToHex = new StringToHex();
+           // BitArray asd = new BitArray(8,true);
 
-           asd= stringToHex.ConvertHexToBitArray("a5");
+           //asd= stringToHex.ConvertHexToBitArray("a5");
 
-            RoFunction roFunction = new RoFunction();
-            roFunction.RoFunctionImplement(deneme);
+           // RoFunction roFunction = new RoFunction();
+           // roFunction.RoFunctionImplement(deneme);
 
-            LambdaFunction lambdaFunction = new LambdaFunction();
+           // LambdaFunction lambdaFunction = new LambdaFunction();
 
-            lambdaFunction.LambdaFuncImplement(deneme);
+           // lambdaFunction.LambdaFuncImplement(deneme);
 
-            TauFunction tauFunction = new TauFunction();
-            tauFunction.TauFuncImplement(deneme);
+           // TauFunction tauFunction = new TauFunction();
+           // tauFunction.TauFuncImplement(deneme);
 
 
             Console.ReadLine();
