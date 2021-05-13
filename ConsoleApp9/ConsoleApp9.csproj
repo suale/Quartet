@@ -47,10 +47,16 @@
     <Compile Include="AssociatedDataSec.cs" />
     <Compile Include="Concatenate.cs" />
     <Compile Include="Divide.cs" />
+    <Compile Include="DivideSecretKey.cs" />
     <Compile Include="InitializationPhase.cs" />
+    <Compile Include="KeyIVLoad.cs" />
     <Compile Include="LambdaFunction.cs" />
+    <Compile Include="NonceDivider.cs" />
     <Compile Include="OneIniRound.cs" />
     <Compile Include="ProcAssocData.cs" />
+    <Compile Include="ProcDIV.cs" />
+    <Compile Include="ProcPlainR.cs" />
+    <Compile Include="ProcPlainText.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReadText.cs" />

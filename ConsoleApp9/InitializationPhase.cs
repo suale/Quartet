@@ -12,21 +12,26 @@ namespace ConsoleApp9
 
         OneIniRound OneIniRound = new OneIniRound();
 
-        BitArray key70;
-        BitArray key158;
+        KeyIVLoad keyIVLoad = new KeyIVLoad();
 
 
-        public List<BitArray> InitialPhase(List<BitArray> gelenBitArrayler)
+        DivideSecretKey divideSecretKey = new DivideSecretKey();
+
+        public List<BitArray> InitialPhase(string secretKey, string nonce)
         {
+           List<BitArray> gelenBitArrayler= keyIVLoad.Load(secretKey, nonce);
+            List<BitArray> xorLancak = new List<BitArray>();
+            xorLancak = divideSecretKey.DivideKey(secretKey);
+           
             for (int i = 0; i < 24; i++)
             {
                 OneIniRound.OneIniRoundImplemen(gelenBitArrayler);
 
 
             }
-
-            gelenBitArrayler[0] = gelenBitArrayler[0].Xor(key70);
-            gelenBitArrayler[1] = gelenBitArrayler[1].Xor(key158);
+            //Altta xorlanacak değerler başlangıçta gelen değerler olarak düzeltilecek
+            gelenBitArrayler[0] = gelenBitArrayler[0].Xor(xorLancak[1]);
+            gelenBitArrayler[1] = gelenBitArrayler[1].Xor(xorLancak[0]);
 
             return gelenBitArrayler;
 

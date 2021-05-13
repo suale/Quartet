@@ -19,7 +19,7 @@ namespace ConsoleApp9
             dogru[63] = true;
             Rotate64 rotate64 = new Rotate64();
 
-            gidenBitArray = gelenBitArrayler[2].Xor(gelenBitArrayler[3]).Xor(gelenBitArrayler[1].Xor(dogru)).And((rotate64.rotateRight(gelenBitArrayler[0], nz)));
+            gidenBitArray = (gelenBitArrayler[2].Xor(gelenBitArrayler[3]).Xor(gelenBitArrayler[1].Xor(dogru))).And((rotate64.rotateRight(gelenBitArrayler[0], nz)));
 
             return gidenBitArray;
         }
