@@ -45,9 +45,11 @@
   <ItemGroup>
     <Compile Include="AssociatedData.cs" />
     <Compile Include="AssociatedDataSec.cs" />
+    <Compile Include="BitToString.cs" />
     <Compile Include="Concatenate.cs" />
     <Compile Include="Divide.cs" />
     <Compile Include="DivideSecretKey.cs" />
+    <Compile Include="FinalTagGeneration.cs" />
     <Compile Include="InitializationPhase.cs" />
     <Compile Include="KeyIVLoad.cs" />
     <Compile Include="LambdaFunction.cs" />
@@ -59,12 +61,15 @@
     <Compile Include="ProcPlainText.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quartet_AE.cs" />
+    <Compile Include="Quartet_VD.cs" />
     <Compile Include="ReadText.cs" />
     <Compile Include="RoFunction.cs" />
     <Compile Include="Rotate.cs" />
     <Compile Include="Rotate64.cs" />
     <Compile Include="RoundTauConsts.cs" />
     <Compile Include="StringToHex.cs" />
+    <Compile Include="TagGenR.cs" />
     <Compile Include="TauFunction.cs" />
     <Compile Include="XFunction.cs" />
     <Compile Include="ZetaFunction.cs" />

@@ -7,24 +7,25 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp9
 {
-    class ProcPlainR
+    class TagGenR
     {
+
         List<BitArray> gidenBitArrayler = new List<BitArray>();
         XFunction xFunction = new XFunction();
         RoFunction roFunction = new RoFunction();
         LambdaFunction lambdaFunction = new LambdaFunction();
-        
+
 
         int sabit0 = 20, sabit1 = 23, sabit2 = 5, sabit3 = 26;//ro için sabitler
 
 
 
-        int[] param0 = new int[2] { 1, 6 };
+        int[] param0 = new int[2] { 61, 39 };
         int[] param1 = new int[2] { 10, 17 };
         int[] param2 = new int[2] { 7, 41 };
-        int[] param3 = new int[2] { 61, 39 };
+        int[] param3 = new int[2] { 19, 28 };
 
-        public List<BitArray> OneIniRoundImplemen(List<BitArray> gelenBitArrayler)
+        public List<BitArray> OneTagGenRoundImplement(List<BitArray> gelenBitArrayler)
         {
 
 
@@ -41,5 +42,6 @@ namespace ConsoleApp9
 
             return gidenBitArrayler;
         }
+
     }
 }

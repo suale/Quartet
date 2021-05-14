@@ -38,7 +38,6 @@ namespace ConsoleApp9
                 willConcatenate.Clear();
            
 
-
             return RoFuncSonuc;
 
         }

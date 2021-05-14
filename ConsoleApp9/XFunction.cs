@@ -19,11 +19,16 @@ namespace ConsoleApp9
 
         public BitArray XfunctionImplement(BitArray x0, BitArray x1, BitArray x2)
         {
-            
-            
+
+
             dogru[63] = true;
 
-            x0 = (x0.Xor(x2.Xor(dogru)).And(x1));
+            if (x2[63] == true)
+                x2[63] = false;
+            else
+                x2[63] = true;
+
+            x0 = x0.Xor((x2).And(x1));
             
 
             

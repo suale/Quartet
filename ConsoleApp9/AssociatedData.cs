@@ -10,7 +10,6 @@ namespace ConsoleApp9
     class AssociatedData
     {
 
-        List<BitArray> gidenBitArrayler = new List<BitArray>();
         XFunction xFunction = new XFunction();
         RoFunction roFunction = new RoFunction();
         LambdaFunction lambdaFunction = new LambdaFunction();
@@ -33,14 +32,15 @@ namespace ConsoleApp9
             BitArray x2 = lambdaFunction.LambdaFuncImplement(roFunction.RoFunctionImplement(xFunction.XfunctionImplement(gelenBitArrayler[1], gelenBitArrayler[2], gelenBitArrayler[3]), sabit3), param2[0], param2[1]);
             BitArray x1 = lambdaFunction.LambdaFuncImplement(roFunction.RoFunctionImplement(xFunction.XfunctionImplement(gelenBitArrayler[2], gelenBitArrayler[3], gelenBitArrayler[0]), sabit0), param1[0], param1[1]);
             BitArray x0 = lambdaFunction.LambdaFuncImplement(roFunction.RoFunctionImplement(xFunction.XfunctionImplement(gelenBitArrayler[3], gelenBitArrayler[0], gelenBitArrayler[1]), sabit1), param0[0], param0[1]);
+            
+            gelenBitArrayler.Clear();
 
+            gelenBitArrayler.Add(x0);
+            gelenBitArrayler.Add(x1);
+            gelenBitArrayler.Add(x2);
+            gelenBitArrayler.Add(x3);
 
-            gidenBitArrayler.Add(x0);
-            gidenBitArrayler.Add(x1);
-            gidenBitArrayler.Add(x2);
-            gidenBitArrayler.Add(x3);
-
-            return gidenBitArrayler;
+            return gelenBitArrayler;
         }
 
 

@@ -12,29 +12,24 @@ namespace ConsoleApp9
     {
         static void Main()
         {
-            string secretKey = "1234567890123456";
-            string nonce = "123456789012";
-
-            InitializationPhase initializationPhase = new InitializationPhase();
-
-            
-
+            string secretKey = "AAAAAAAAAAAAAAAA";
+            string nonce = "BBBBBBBBBBBB";
             string assocData = "deneme";
+            string metin = "abcdefglssertyul";
+            Quartet_AE quartet_AE = new Quartet_AE();
+            List<BitArray> crypted = new List<BitArray>();
+            crypted=quartet_AE.Encrypt(secretKey, nonce, assocData, metin);
 
-            ProcAssocData procAssocData = new ProcAssocData();
-
-            procAssocData.ProcAssocDataImp(initializationPhase.InitialPhase(secretKey, nonce), assocData);
+            BitToString bitToString = new BitToString();
+            int sayac = 0;
+            foreach (var item in crypted)
+            {
+                Console.WriteLine(bitToString.BitArrayToByteArray(item));
+                Console.WriteLine(sayac);
+                sayac++;
+            }
 
             
-
-
-           
-
-            
-
-         
-
-
 
             Console.ReadLine();
 
@@ -44,30 +39,3 @@ namespace ConsoleApp9
 
 
 
-
-// List<BitArray> deneme = new List<BitArray>();
-
-// XFunction xFunction = new XFunction();
-// deneme= xFunction.XfunctionImplement(textOku.DivideLanes("aksdhjkasjkdlasffafadasdasdsadfafhylk"));
-
-
-
-// BitArray dene = new BitArray(64, true);
-// dene[1] = false;
-// dene[7] = false;
-// dene[3] = false;
-
-// StringToHex stringToHex = new StringToHex();
-// BitArray asd = new BitArray(8,true);
-
-//asd= stringToHex.ConvertHexToBitArray("a5");
-
-// RoFunction roFunction = new RoFunction();
-// roFunction.RoFunctionImplement(deneme);
-
-// LambdaFunction lambdaFunction = new LambdaFunction();
-
-// lambdaFunction.LambdaFuncImplement(deneme);
-
-// TauFunction tauFunction = new TauFunction();
-// tauFunction.TauFuncImplement(deneme);
